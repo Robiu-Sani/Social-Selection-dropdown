@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+     
+    <head>
+	     <meta charset="UTF-8">
+	     <title>select menu var</title>
+	     <link rel="stylesheet" href="style.css">
+    </head>
+	
+    <body>
+	  <div class="hero">
+		  <div class="selector">
+			  <div id="selectFild">
+				  <p id="selectText" >Select social media</p>
+				  <img id="arrow" src="img/img (11).png">
+			  </div>
+		  <ul id="list" class="hide">
+			  <li class="opotions"><img src="img/img (1).png"><p>Facebook</p></li>
+			  <li class="opotions"><img src="img/img (10).png"><p>You Tube</p></li>
+			  <li class="opotions"><img src="img/img (3).png"><p>Instagrame</p></li>
+			  <li class="opotions"><img src="img/img(18).png"><p>Twitter</p></li>
+			  <li class="opotions"><img src="img/img (6).png"><p>Pinterest</p></li>
+			  <li class="opotions"><img src="img/img (9).png"><p>WhatsApp</p></li> 
+		  </ul>
+	  </div>
+	  </div>
+
+ 	 <script>
+		  var selectFild=document.getElementById("selectFild");
+		  var selectText=document.getElementById("selectText");
+		  var list=document.getElementById("list");
+		  var arrow=document.getElementById("arrow");
+		  var opotions=document.getElementsByClassName("opotions");
+
+		  selectFild.onclick=function(){
+			list.classList.toggle("hide");
+			arrow.classList.toggle("arrow");
+		  }
+		  for(opotion of opotions){
+			opotion.onclick=function(){
+				selectText.innerHTML=this.textContent;
+			}
+		  }
+
+	  </script>
+    </body>
+	
+</html>
